@@ -1,0 +1,19 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "danriti/gunicorn-flask",
+      "network": "BRIDGE",
+      "portMappings": [
+        { "containerPort": 5000, "hostPort": 0, "servicePort": 80, "protocol": "tcp" }
+      ]
+    }
+  },
+  "id": "gunicorn-flask",
+  "instances": 1,
+  "cpus": 0.25,
+  "mem": 256,
+  "ports": [
+      80
+  ]
+}
