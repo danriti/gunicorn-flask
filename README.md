@@ -3,11 +3,9 @@
 This repository contains files necessary for building a Docker image of
 Gunicorn + Flask.
 
-
 ### Base Docker Image
 
 * [ubuntu:12.04](https://registry.hub.docker.com/_/ubuntu/)
-
 
 ### Installation
 
@@ -19,11 +17,20 @@ Gunicorn + Flask.
 docker pull danriti/gunicorn-flask
 ```
 
-
-### Usage
+### Docker Usage
 
 ```bash
 docker run -d -P danriti/gunicorn-flask
 ```
 
 After few seconds, open `http://<host>:<port>` to see the Flask app.
+
+### Marathon Usage
+
+```bash
+curl -X POST -H "Content-Type: application/json" http://<master>:<port>/v2/apps -d@hello.json
+```
+
+Replace `<master>` and `<port>` with the IP address of your [Marathon][1] host.
+
+[1]: https://mesosphere.github.io/marathon/
