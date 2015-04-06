@@ -28,9 +28,9 @@ After few seconds, open `http://<host>:<port>` to see the Flask app.
 ### Marathon Usage
 
 ```bash
-curl -X POST -H "Content-Type: application/json" http://<master>:<port>/v2/apps -d@hello.json
+curl -X POST -H "Content-Type: application/json" http://<master>:<port>/v2/apps -d@marathon.json
 ```
 
-Replace `<master>` and `<port>` with the IP address of your [Marathon][1] host.
+Replace `<master>` and `<port>` with the IP address and port of your [Marathon][1] host.
 
 [1]: https://mesosphere.github.io/marathon/
