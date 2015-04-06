@@ -1,9 +1,11 @@
 """ hello.py """
 
+import logging
 import socket
 
 from flask import Flask, jsonify
 
+log = logging.getLogger(__name__)
 app = Flask(__name__)
 
 @app.route('/')
